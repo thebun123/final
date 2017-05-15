@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TabWidget>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@android:id/tabcontent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bank1"
+                android:padding="10dp"
+                android:background="#b3b3b3">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/bank"
+                    ></ListView>
+            </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="#b3b3b3"
+                android:weightSum="100"
+                android:id="@+id/creatAccount">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="14"
+                    android:orientation="horizontal"
+                    android:weightSum="100" android:background="#FFF"
+                    android:layout_marginTop="10dp">
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="80"
+                        android:hint="Nhập số tiền gửi"
+                        android:textAlignment="center"
+                        android:id="@+id/MoneyInput"
+                        android:inputType="number"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:text="VND"
+                        android:textAlignment="center"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="42"
+                    android:background="#FFF"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="100"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="33"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+
+                        >
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:text="Ngân hàng"
+                            android:textAlignment="center"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="20"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:id="@+id/nganhang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:hint="Nhập tên Ngân Hàng"
+                            android:textAlignment="textEnd"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="33"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="31"
+                            android:text="Kì Hạn"
+                            android:textAlignment="center"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="19"
+                            android:layout_height="wrap_content" />
+
+                        <Spinner
+                            android:id="@+id/SKiHan"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="34"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="31"
+                            android:text="Lãi Suất"
+                            android:textAlignment="center"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="29"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:id="@+id/Laisuat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="30"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:inputType="number"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10"
+                            android:text="%"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textSize="25dp"
+                            android:layout_marginTop="5dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:background="#FFF"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30"
+                        android:text="Ghi Chú"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        />
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="70"
+                        android:id="@+id/GhiChu"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:layout_marginTop="10dp"
+                    android:background="#3CB371"
+                    android:weightSum="100"
+                    android:id="@+id/save"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+
+                        />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_weight="10"
+                        android:id="@+id/Isave"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20"
+                        android:text="Lưu"
+                        android:gravity="left"
+                        android:textColor="#FFF"
+                        android:layout_marginTop="3dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="11"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:id="@+id/totalAvenuep"
+                    android:visibility="invisible">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30"
+                        android:text="Tổng số tiền"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="70"
+                        android:id="@+id/totalAvenue"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:weightSum="100">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="60"
+                        android:id="@+id/BcreactAccount"
+                        android:text="Create a new Account"
+                        android:background="#3CB371"
+                        android:textColor="#FFF"
+                        android:gravity="center"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</TabHost>
